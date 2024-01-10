@@ -1,0 +1,18 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "project"
+dynamic = ["version"]
+authors = [
+    {name = "Triss JACQUIOT", email = "triss@misoban.com"},
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm.version]
+source = "scm"
+tag_regex = "project/(?P<version>[1-9][0-9]?[.][0-9]+[.][0-9]+)"
