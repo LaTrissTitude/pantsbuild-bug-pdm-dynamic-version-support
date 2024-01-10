@@ -3,15 +3,19 @@
 ## Steps to Reproduce
 
 ```sh
+# Clone this repo
+git clone git@github.com:LaTrissTitude/pantsbuild-bug-pdm-dynamic-version-support.git
+cd pantsbuild-bug-pdm-dynamic-version-support
+
 # Should return project/1.0.0
-git tag
+git tag project/1.2.3 -m "Sample tag"
 
 # Works as expected
-# Produces dist/project-1.0.0+...-py3-none-any.whl
+# Produces dist/project-1.2.3+...-py3-none-any.whl
 pdm build -p src/project -d ../../dist
 
 # Fails, PDM backend cannot find the required SCM tags
-# Should produce dist/project-1.0.0+...-py3-none-any.whl
+# Should produce dist/project-1.2.3+...-py3-none-any.whl
 pants package ::
 ```
 
