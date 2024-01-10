@@ -7,7 +7,7 @@
 git clone git@github.com:LaTrissTitude/pantsbuild-bug-pdm-dynamic-version-support.git
 cd pantsbuild-bug-pdm-dynamic-version-support
 
-# Should return project/1.0.0
+# Add version tag
 git tag project/1.2.3 -m "Sample tag"
 
 # Works as expected
